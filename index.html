@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jokenpô</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">Jokenpô</h1>
+    </header>
+
+    <section class="inicio">
+        <div class="opcoes-inicio">
+            <div class="pedra">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 44l5-17 14-11 17 3 9 15-3 16H14z"/><path d="M29 16l-2 11 7 6"/>
+                </svg>
+
+                <span>Pedra</span>
+            </div>
+
+            <div class="papel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h20l10 10v34H18z"/><path d="M38 10v10h10"/><path d="M24 32h18M24 40h18"/>
+                </svg>
+
+                <span>Papel</span>
+            </div>
+
+            <div class="tesoura">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="20" cy="46" r="7"/><circle cx="44" cy="46" r="7"/><path d="M25 41L46 12M39 41L18 12"/>
+                </svg>
+
+                <span>Tesoura</span>
+            </div>
+        </div>
+
+        <p>Você contra o computador.<br>Quem fizer <span class="pontos-vencer">x</span> pontos primeiro vence.</p>
+        <button class="comecar">Começar partida</button>
+    </section>
+
+</body>
+</html>
