@@ -63,3 +63,153 @@ body {
     border: none;
 }
 
+/*TELA PRINCIPAL*/
+.tela-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 60vw;
+    margin: 0 auto;
+}
+
+ /*PLACAR*/
+.placar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.placar .rodada {
+    color: var(--cinza-neutro);
+}
+
+.placar .jogador {
+    color: var(--jogador);
+
+}
+
+.placar .cpu {
+    color: var(--cpu);
+}
+
+.pontos {
+    font-size: 4rem;
+    color: var(--preto-azulado);
+}
+
+/*JOGADA*/
+.container-jogada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.frases {
+    color: var(--cinza-neutro);
+    font-size: 2.5rem;
+}
+
+.jogadas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.jogada {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--cinza-neutro);
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    border: .5rem solid var(--borda);
+    border-style: dashed;
+}
+
+.jogada-do-jogador {
+    --cor: var(--jogador);
+}
+.jogada-do-cpu {
+    --cor: var(--cpu);
+}
+
+.jogada:has(.vazio.esconde) {
+    background: var(--superficie);
+    border-color: var(--cor);
+    border-style: solid;
+}
+
+.balancando,
+.balancando {
+    /* IA me ajudou a relembrar que existe a possibilidade da prop "3". */
+    animation: bounce 400ms ease-in-out 3;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2rem);
+    }
+}
+
+.jogada svg {
+    stroke: var(--cor);
+}
+
+.jogada-do-cpu svg {
+    transform: scaleX(-1);
+}
+
+/*OPCOES DE JOGADA*/
+.opcoes, .opcoes-inicio {
+    display: flex;
+    max-width: 80%;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.opcoes button, .opcoes-inicio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 8rem;
+    border: 2px solid var(--borda);
+    border-radius: 1rem;
+    background-color: var(--superficie);
+    cursor: pointer;
+}
+
+.opcoes-inicio div {
+    border-radius: 50%;
+    height: 10rem;
+    border: 0px solid;
+}
+
+button:active {
+    transform: scale(.96);
+    transition: transform 100ms ease-out;
+}
+
+.opcoes button:disabled {
+    cursor: not-allowed;
+    background-color: var(--cinza-desabilitado);
+}
+
+.opcoes span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
