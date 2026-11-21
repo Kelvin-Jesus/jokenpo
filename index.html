@@ -45,5 +45,113 @@
         <button class="comecar">Começar partida</button>
     </section>
 
+    <section class="tela-principal esconde">
+        <div class="placar">
+            <div class="placar-jogador">
+                <p class="jogador">
+                    Você
+                    <span class="pontos">0</span>
+                </p>
+            </div>
+
+            <p class="rodada">
+                Rodada <span class="rodada-atual">1</span>
+            </p>
+
+            <div class="placar-cpu">
+                <p class="cpu">
+                    <span class="pontos">0</span>
+                    CPU
+                </p>
+            </div>
+        </div>
+
+        <div class="container-jogada">
+            <div class="jogadas">
+                <div class="jogada-do-jogador">
+                    <div class="jogada">
+                        <div class="vazio">?</div>
+                        <div class="pedra esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Pedra</title>
+                              <path d="M10 44l5-17 14-11 17 3 9 15-3 16H14z"/><path d="M29 16l-2 11 7 6"/>
+                            </svg>
+                        </div>
+                        <div class="papel esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Papel</title>
+                              <path d="M18 10h20l10 10v34H18z"/><path d="M38 10v10h10"/><path d="M24 32h18M24 40h18"/>
+                            </svg>
+                        </div>
+                        <div class="tesoura esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Tesoura</title>
+                              <circle cx="20" cy="46" r="7"/><circle cx="44" cy="46" r="7"/><path d="M25 41L46 12M39 41L18 12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p>contra</p>
+                <div class="jogada-do-cpu">
+                    <div class="jogada">
+                        <div class="vazio">?</div>
+                        <div class="pedra esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Pedra</title>
+                              <path d="M10 44l5-17 14-11 17 3 9 15-3 16H14z"/><path d="M29 16l-2 11 7 6"/>
+                            </svg>
+                        </div>
+                        <div class="papel esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Papel</title>
+                              <path d="M18 10h20l10 10v34H18z"/><path d="M38 10v10h10"/><path d="M24 32h18M24 40h18"/>
+                            </svg>
+                        </div>
+                        <div class="tesoura esconde">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                              <title>Tesoura</title>
+                              <circle cx="20" cy="46" r="7"/><circle cx="44" cy="46" r="7"/><path d="M25 41L46 12M39 41L18 12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frases">
+                <p class="primeira-jogada">Faça a primeira jogada</p>
+                <p class="quem-ganhou esconde">
+                    Ponto <b class="jogador-ou-cpu">a</b>, <b class="opcao1">x</b> ganha de <b class="opcao2">y</b>
+                </p>
+                <b class="empate esconde">Empate</b>
+            </div>
+        </div>
+
+        <div class="opcoes">
+            <button class="pedra">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 44l5-17 14-11 17 3 9 15-3 16H14z"/><path d="M29 16l-2 11 7 6"/>
+                </svg>
+
+                <span>Pedra</span>
+            </button>
+
+            <button class="papel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 10h20l10 10v34H18z"/><path d="M38 10v10h10"/><path d="M24 32h18M24 40h18"/>
+                </svg>
+
+                <span>Papel</span>
+            </button>
+
+            <button class="tesoura">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#1B2433" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="20" cy="46" r="7"/><circle cx="44" cy="46" r="7"/><path d="M25 41L46 12M39 41L18 12"/>
+                </svg>
+
+                <span>Tesoura</span>
+            </button>
+        </div>
+    </section>
+
 </body>
 </html>
