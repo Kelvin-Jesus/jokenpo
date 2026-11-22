@@ -213,3 +213,45 @@ button:active {
     font-weight: bold;
 }
 
+/*TELA RESULTADO*/
+.resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    gap: 1.5rem;
+}
+
+.resultado .fim {
+    color: var(--jogador);
+}
+
+.resultado h2 {
+    font-size: 4rem;
+}
+
+.resultado-placar {
+    padding: 1rem;
+    background-color: var(--superficie);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 20vw;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.resultado-placar span {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.resultado-placar span.seu-resultado {
+    color: var(--jogador);
+}
+
+.resultado-placar span.cpu-resultado {
+    color: var(--cpu);
+}
