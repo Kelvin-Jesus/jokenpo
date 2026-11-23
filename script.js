@@ -116,4 +116,31 @@ const opcoesClicaveis = (ehClicavel) => document
     .querySelectorAll('.opcoes button')
     .forEach(btn => (btn.disabled = !ehClicavel));
 
+const desenhaResultado = () => {
+    document.querySelector('.resultado').classList.remove('esconde');
+    document.querySelector('.tela-principal').classList.add('esconde');
+
+    document.querySelector('.vencedor').innerText = (estado.pontos.jogador > estado.pontos.cpu ? 'Você' : 'CPU');
+    document.querySelector('.seu-resultado').innerText = estado.pontos.jogador;
+    document.querySelector('.cpu-resultado').innerText = estado.pontos.cpu;
+    document.querySelector('.qtd-rodadas').innerText = estado.rodada - 1;
+}
+
+const resetar = () => {
+    estado.rodada = 1;
+    estado.pontos = { jogador: 0, cpu: 0 };
+    estado.jogada = { jogador: '', cpu: '' };
+
+    mostraSomente(document.querySelectorAll('.inicio, .tela-principal, .resultado'), 'tela-principal')
+    mostraSomente(document.querySelector('.frases').children, 'primeira-jogada')
+
+    desenharPlacar()
+    opcoesClicaveis(true)
+
+    mostraJogada($jogadaJogador, 'vazio');
+    mostraJogada($jogadaCPU, 'vazio');
+}
+
+document.querySelector('.resultado button').addEventListener('click', resetar);
+
 const jogadaDaCPU = () => opcoes[Math.floor(Math.random() * opcoes.length)];
